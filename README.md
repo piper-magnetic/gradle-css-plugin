@@ -1,25 +1,15 @@
+# Gradle 7.x CSS Plugin!
+This project is split off from eriwen's [Gradle CSS Plugin](https://github.com/eriwen/gradle-css-plugin). The original seems unmaintained for later versions of Gradle, and the goal is effectively to leave its functionality as untouched as possible for now while getting it to build and run on Gradle 7 and up.
+
 # Quick Start [![Build Status](https://secure.travis-ci.org/eriwen/gradle-css-plugin.png)](http://travis-ci.org/eriwen/gradle-css-plugin)
 
 Managing your CSS in a [Gradle](http://gradle.org) build is super easy now! Just add this to your *build.gradle* file:
 
-### Gradle 2.1+
 ```groovy
 plugins {
-  id "com.eriwen.gradle.css" version "2.14.0"
+  id "com.magnetichq.gradle.css" version "3.0.0"
 }
 ```
-
-### Gradle 2.0-
-```groovy
-// Grab the plugin from a Maven Repo automatically
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.eriwen:gradle-css-plugin:1.11.0'
-    }
-}
 
 // Invoke the plugin
 apply plugin: 'css'
