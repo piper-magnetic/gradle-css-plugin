@@ -11,6 +11,7 @@ plugins {
 }
 ```
 
+```
 // Invoke the plugin
 apply plugin: 'css'
 
