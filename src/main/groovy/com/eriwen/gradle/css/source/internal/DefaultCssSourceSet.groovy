@@ -24,7 +24,7 @@ class DefaultCssSourceSet implements CssSourceSet {
     DefaultCssSourceSet(String name, Project project, Instantiator instantiator, FileResolver fileResolver) {
         this.name = name
         this.displayName = GUtil.toWords(name)
-        this.css = new DefaultSourceDirectorySet(name, String.format("%s CSS source", displayName))
+        this.css = project.objects.sourceDirectorySet(name, String.format("%s CSS source", displayName))
         this.processing = instantiator.newInstance(DefaultCssProcessingChain, project, this, instantiator)
         this.processed = project.files({ processing.empty ? css : processing.last().outputs.files })
     }
